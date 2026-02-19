@@ -1,0 +1,209 @@
+/* ---------- RESET ---------- */
+* {
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #f5f3ef;
+  color: #2f2f2f;
+}
+
+/* ---------- APP CONTAINER ---------- */
+.app {
+  max-width: 1200px;
+  margin: auto;
+  padding: 40px 30px;
+}
+
+/* ---------- HEADER ---------- */
+header {
+  margin-bottom: 40px;
+}
+
+header h1 {
+  font-size: 36px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+header p {
+  font-size: 16px;
+  color: #6b6b6b;
+}
+
+/* ---------- MAIN CARD ---------- */
+section {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 30px;
+  margin-bottom: 30px;
+}
+
+/* ---------- SPLIT PANEL ---------- */
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.controls select,
+.controls input {
+  padding: 10px 14px;
+  border-radius: 999px;
+  border: 1px solid #ccc;
+  background: #fafafa;
+}
+
+/* ---------- PROCESS TABLE ---------- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+th {
+  text-align: left;
+  font-weight: 500;
+  color: #7a7a7a;
+  padding-bottom: 10px;
+}
+
+td {
+  padding: 12px 0;
+}
+
+td input {
+  width: 90%;
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+/* ---------- BUTTONS ---------- */
+button {
+  padding: 10px 18px;
+  border-radius: 999px;
+  border: none;
+  background: #3b3a2f;
+  color: #fff;
+  cursor: pointer;
+  margin-right: 8px;
+  transition: all 0.25s ease;
+}
+
+button:hover {
+  background: #2a291f;
+  transform: translateY(-1px);
+}
+
+/* ---------- GANTT CHART ---------- */
+#gantt {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+  overflow-x: auto;
+}
+
+
+
+#gantt div {
+  background: #3b3a2f;
+  border-radius: 14px;
+  padding: 12px 16px;
+  min-width: 90px;
+  height: 70px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  color: #fff;
+  font-weight: 500;
+}
+
+/* ---------- METRICS ---------- */
+#metrics table {
+  margin-top: 20px;
+}
+
+#metrics h3 {
+  margin-top: 0;
+  font-weight: 500;
+}
+
+/* ---------- SOFT SHADOW ---------- */
+section {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+}
+
+
+/* HARD RESET FOR GANTT BLOCKS */
+#gantt * {
+  background: none !important;
+  box-shadow: none !important;
+  filter: none !important;
+  opacity: 1 !important;
+}
+
+#gantt div {
+  background-color: #000000 !important;
+}
+#comparisonChart {
+  width: 100%;
+  max-width: 700px;
+  height: 300px;
+  margin: 30px auto;
+  display: block;
+}
+#readyQueue {
+  display: flex;
+  gap: 10px;
+  min-height: 40px;
+  margin: 10px 0 20px;
+}
+
+.ready-item {
+  padding: 6px 12px;
+  background: #e5e7eb;
+  border-radius: 6px;
+  font-weight: 600;
+}
+/* ===== CPU STATE BOX ===== */
+.cpu-state {
+  padding: 14px 24px;
+  margin: 12px 0 24px;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 16px;
+
+  background: #111827;   /* dark slate */
+  color: #ffffff;
+
+  display: inline-block;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+/* Hide step visuals by default */
+#stepVisuals {
+  display: none;
+}
+
+/* CPU State styling */
+.cpu-state {
+  padding: 14px 24px;
+  margin: 12px 0 24px;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 16px;
+  background: #111827;
+  color: #ffffff;
+  display: inline-block;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+
+

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CPU Scheduling Visualizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div class="app">
+
+    <!-- HEADER -->
+    <header>
+        <h1>CPU Scheduling Algorithm Visualizer</h1>
+        <p>Interactive OS Scheduling Simulator</p>
+    </header>
+
+    <!-- CONTROLS -->
+    <section class="controls">
+        <div>
+            <label for="algorithm"><strong>Algorithm:</strong></label>
+            <select id="algorithm">
+                <option value="fcfs">First Come First Serve (FCFS)</option>
+                <option value="sjf">Shortest Job First (SJF)</option>
+                <option value="rr">Round Robin</option>
+            </select>
+
+            <input type="number" id="quantum" placeholder="Time Quantum" style="display:none">
+        </div>
+    </section>
+
+    <!-- PROCESS TABLE -->
+    <section class="process-input">
+        <h2>Process Table</h2>
+
+        <table id="processTable">
+            <thead>
+                <tr>
+                    <th>Process</th>
+                    <th>Arrival Time</th>
+                    <th>Burst Time</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>P1</td>
+                    <td><input type="number" value="0"></td>
+                    <td><input type="number" value="5"></td>
+                </tr>
+                <tr>
+                    <td>P2</td>
+                    <td><input type="number" value="1"></td>
+                    <td><input type="number" value="3"></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="buttons">
+            <button id="addProcess">➕ Add Process</button>
+            <button id="runBtn">▶ Run Simulation</button>
+            <button id="stepBtn">⏭ Step Execution</button>
+            <button id="resetBtn">🔄 Reset</button>
+            <button id="compareBtn">📊 Compare Algorithms</button>
+        </div>
+    </section>
+
+    <!-- OUTPUT -->
+    <section class="output">
+        <div id="stepVisuals">
+           <h2>CPU State</h2>
+           <div id="cpuState" class="cpu-state">CPU: IDLE</div>
+
+           <h2>Ready Queue (Step Mode)</h2>
+           <div id="readyQueue"></div>
+       </div>
+
+
+        <h2>Gantt Chart</h2>
+        <div id="gantt"></div>
+
+        <h2>Process Metrics</h2>
+        <div id="metrics"></div>
+
+        <h2>Algorithm Comparison</h2>
+        <canvas id="comparisonChart" height="300"></canvas>
+    </section>
+
+</div>
+
+<!-- SCRIPTS -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
